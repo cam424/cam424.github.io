@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+@font-face {
+  font-family: 'vcr_osd_monoregular';
+  src: url('./fonts/vcr_osd_mono_1.001-webfont.woff2') format('woff2'),
+       url('./fonts/vcr_osd_mono_1.001-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'windowsregular';
+  src: url('./fonts/windows_regular-webfont.woff2') format('woff2'),
+       url('./fonts/windows_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  font-family: 'Share Tech Mono', monospace;
+}
