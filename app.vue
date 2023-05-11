@@ -3,24 +3,32 @@
     <header class="header">
       <ul class="header-items">
         <li class="header-item app-icon">
-          <font-awesome-icon :icon="['fa-solid', 'fa-wand-sparkles']" size="xs" inverse />
+          <client-only>
+            <font-awesome-icon :icon="['fa-solid', 'fa-wand-sparkles']" size="xs" inverse />
+          </client-only>
         </li>
         <li class="header-item app-title">Courtney Mohr - Paint</li>
         <li class="header-item app-options">
           <ul class="options-buttons">
             <li class="option-button">
               <div class="button-bevel">
-                <font-awesome-icon :icon="['fa-solid', 'fa-window-minimize']" size="xs" inverse />
+                <client-only>
+                  <font-awesome-icon :icon="['fa-solid', 'fa-window-minimize']" size="xs" inverse />
+                </client-only>
               </div>
             </li>
             <li class="option-button">
               <div class="button-bevel">
-                <font-awesome-icon :icon="['fa-solid', 'fa-window-maximize']" size="xs" inverse />
+                <client-only>
+                  <font-awesome-icon :icon="['fa-solid', 'fa-window-maximize']" size="xs" inverse />
+                </client-only>
               </div>
             </li>
             <li class="option-button">
               <div class="button-bevel">
-                <font-awesome-icon :icon="['fa-solid', 'fa-xmark']" size="xs" inverse />
+                <client-only>
+                  <font-awesome-icon :icon="['fa-solid', 'fa-xmark']" size="xs" inverse />
+                </client-only>
               </div>
             </li>
           </ul>
@@ -138,32 +146,38 @@
       <div ref="interfaceMain" class="interface-main">
         <div id="screen"></div>
         <div class="screen-content">
-          <h2 class="play">PLAY <font-awesome-icon :icon="['fa-solid', 'fa-play']" size="xs" inverse /></h2>
+          <h2 class="play">PLAY <client-only><font-awesome-icon :icon="['fa-solid', 'fa-play']" size="xs" inverse /></client-only></h2>
           <h1 id="text">Lemonade Crunchy Ice</h1>
           <h2 class="marker">0:00:01</h2>
         </div>
         <div class="static background">
           <div class="water background"></div>
-          <svg>
-            <filter id="turbulence" x="0" y="0" width="100%" height="100%">
-              <feTurbulence id="waves" numOctaves="1" seed="10" baseFrequency="1 1"></feTurbulence>
-              <feDisplacementMap scale="13" in="SourceGraphic"></feDisplacementMap>
-              <animate xlink:href="#waves" attributeName="baseFrequency" dur="60s" 
-              keyTimes="0; 0.5; 1" values="0.02 0.06; 0.04 0.08; 0.02 0.06" repeatCount="indefinite"/>
-            </filter>
-          </svg>
+          <client-only>
+            <svg>
+              <filter id="turbulence" x="0" y="0" width="100%" height="100%">
+                <feTurbulence id="waves" numOctaves="1" seed="10" baseFrequency="1 1"></feTurbulence>
+                <feDisplacementMap scale="13" in="SourceGraphic"></feDisplacementMap>
+                <animate xlink:href="#waves" attributeName="baseFrequency" dur="60s" 
+                keyTimes="0; 0.5; 1" values="0.02 0.06; 0.04 0.08; 0.02 0.06" repeatCount="indefinite"/>
+              </filter>
+            </svg>
+          </client-only>
         </div>
       </div>
       <div ref="interfaceScroll" class="interface-scroll">
         <div class="scroll scroll-up" @mousedown="manualScroll('up')" @click="manualScroll('up', true)">
           <div class="button-bevel">
-              <font-awesome-icon :icon="['fa-solid', 'fa-up-long']" size="xs" inverse />
+              <client-only>
+                <font-awesome-icon :icon="['fa-solid', 'fa-up-long']" size="xs" inverse />
+              </client-only>
             </div>
         </div>
         <div ref="scrollbar" class="scroll scrollbar"></div>
         <div class="scroll scroll-down" @mousedown="manualScroll('down')" @click="manualScroll('down', true)">
           <div class="button-bevel">
-              <font-awesome-icon :icon="['fa-solid', 'fa-down-long']" size="xs" inverse />
+              <client-only>
+                <font-awesome-icon :icon="['fa-solid', 'fa-down-long']" size="xs" inverse />
+              </client-only>
             </div>
         </div>
       </div>
@@ -180,7 +194,9 @@
         <p>
           <span>Built by Courtney Mohr - </span>
           <a href="https://www.linkedin.com/in/courtneymohr/" target="_blank" title="Follow Courtney Mohr on Linkedin">
-            <font-awesome-icon :icon="['fa-brands', 'fa-linkedin']" size="xs" inverse />
+            <client-only>
+              <font-awesome-icon :icon="['fa-brands', 'fa-linkedin']" size="xs" inverse />
+            </client-only>
           </a>
         </p>
         <p class="footer-caption">Be gentle, I'm a work in progress.</p>
