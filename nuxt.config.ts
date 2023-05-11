@@ -36,6 +36,6 @@ export default defineNuxtConfig({
   },
   app: {
     // baseURL: '/docs',
-    buildAssetsDir: '/_nuxt/',
+    buildAssetsDir: '/assets/',
   },
 })
