@@ -35,7 +35,7 @@ export default defineNuxtConfig({
     ]
   },
   app: {
-    baseURL: '/Users/cmohr/portfolio/dist',
+    // baseURL: '/docs',
     buildAssetsDir: '/_nuxt/',
   },
 })
