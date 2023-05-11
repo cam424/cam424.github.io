@@ -3,6 +3,7 @@
 // figma resources: https://www.figma.com/file/Ot7rfpaK2KicT1FYjdLvTu/Untitled?node-id=9%3A194&t=z0RO7pqBH9boscwb-0
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false,
   vite: {
     css: {
       preprocessorOptions: {
@@ -20,8 +21,7 @@ export default defineNuxtConfig({
   ],
   plugins: [
     {
-      src: '~/plugins/dat.js',
-      mode: 'client'
+      src: '~/plugins/dat.js'
     },
     '~/plugins/fontawesome.js'
   ],
